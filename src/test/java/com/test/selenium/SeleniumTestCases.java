@@ -541,9 +541,505 @@ public void testCaseSixteen() {
 	}
 	
 }
-
+public void testCaseSeventeen() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[normalize-space()='Opportunities']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(3000);
+	driver.findElement(By.xpath("//a[normalize-space()='Opportunity Pipeline']")).click();
+	Thread.sleep(2000);
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
 	
-		public Properties getPropValues() throws IOException {
+}
+	
+public void testCaseEighteen() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[normalize-space()='Opportunities']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(3000);
+	driver.findElement(By.xpath("//a[normalize-space()='Stuck Opportunities']")).click();
+	Thread.sleep(2000);
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}
+public void testCaseNineteen() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[normalize-space()='Opportunities']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(3000);
+	Select interval = new Select(driver.findElement(By.id("quarter_q")));
+	interval.selectByVisibleText("Next FQ");
+	Thread.sleep(2000);
+	Select include = new Select(driver.findElement(By.id("open")));
+	include.selectByVisibleText("Open Opportunities");
+	Thread.sleep(2000);
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}	
+
+public void testCaseTwenty() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[@title='Leads Tab']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(2000);
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}	
+
+public void testCaseTwentyone() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[@title='Leads Tab']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//select[@id='fcf']")).click();
+	Thread.sleep(2000);
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}	
+public void testCaseTwentytwo() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[@title='Leads Tab']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(2000);
+	Select view1 = new Select(driver.findElement(By.id("fcf")));
+	view1.selectByVisibleText("My Unread Leads");
+	//driver.findElement(By.xpath("//select[@id='fcf']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("userNav")).click();
+	driver.findElement(By.linkText("Logout")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[@title='Leads Tab']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//input[@title='Go!']")).click();
+	Thread.sleep(2000);
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}	
+public void testCaseTwentythree() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[@title='Leads Tab']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(2000);
+	Select view1 = new Select(driver.findElement(By.id("fcf")));
+	view1.selectByVisibleText("Today's Leads");
+	Thread.sleep(2000);
+	
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}	
+
+public void testCaseTwentyfour() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[@title='Leads Tab']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//input[@title='New']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("name_lastlea2")).sendKeys("ABCD");
+	driver.findElement(By.id("lea3")).sendKeys("ABCD");
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//td[@id='bottomButtonRow']//input[@title='Save']")).click();
+	Thread.sleep(2000);
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}	
+
+public void testCaseTwentyfive() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//li[@id='Contact_Tab']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//input[@title='New']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("name_lastcon2")).sendKeys("Shukla");
+	driver.findElement(By.id("con4")).sendKeys("abcd account");
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//td[@id='bottomButtonRow']//input[@title='Save']")).click();
+	Thread.sleep(2000);
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}	
+
+public void testCaseTwentysix() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//li[@id='Contact_Tab']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[normalize-space()='Create New View']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("fname")).sendKeys("Niharika");
+	driver.findElement(By.id("devname")).sendKeys("Niharika");
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[2]/form[1]/div[3]/table[1]/tbody[1]/tr[1]/td[2]/input[1]")).click();
+	Thread.sleep(2000);
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}	
+
+public void testCaseTwentyseven() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//li[@id='Contact_Tab']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(2000);
+	Select recent = new Select(driver.findElement(By.id("hotlist_mode")));
+	recent.selectByVisibleText("Recently Created");
+	Thread.sleep(2000);
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}	
+
+public void testCaseTwentyeight() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//li[@id='Contact_Tab']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(2000);
+	Select view2 = new Select(driver.findElement(By.id("fcf")));
+	view2.selectByVisibleText("My Contacts");
+	Thread.sleep(2000);
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}	
+
+public void testCaseTwentynine() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//li[@id='Contact_Tab']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(2000);
+	Select view2 = new Select(driver.findElement(By.id("fcf")));
+	view2.selectByVisibleText("My Contacts");
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[normalize-space()='Shukla, Anil']")).click();
+	Thread.sleep(2000);
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}	
+
+public void testCaseThirty() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//li[@id='Contact_Tab']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[normalize-space()='Create New View']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("devname")).sendKeys("EFGH");
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[2]/form[1]/div[3]/table[1]/tbody[1]/tr[1]/td[2]/input[1]")).click();
+	Thread.sleep(2000);
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}	
+
+public void testCaseThirtyone() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//li[@id='Contact_Tab']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[normalize-space()='Create New View']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("fname")).sendKeys("ABCD");
+	driver.findElement(By.id("devname")).sendKeys("EFGH");
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[2]/form[1]/div[3]/table[1]/tbody[1]/tr[1]/td[2]/input[2]")).click();
+	Thread.sleep(2000);
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}	
+
+public void testCaseThirtytwo() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//li[@id='Contact_Tab']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//input[@title='New']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("name_lastcon2")).sendKeys("Indian");
+	driver.findElement(By.id("con4")).sendKeys("Global Media");
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//td[@id='topButtonRow']//input[@title='Save & New']")).click();
+	Thread.sleep(2000);
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}	
+
+public Properties getPropValues() throws IOException {
 			InputStream inputStream = null; 
 			Properties prop = null;
 			try {

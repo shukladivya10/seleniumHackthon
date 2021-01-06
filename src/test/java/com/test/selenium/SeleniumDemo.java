@@ -39,7 +39,23 @@ public class SeleniumDemo {
 	//	stc.testCaseThirteen();
 	//	stc.testCaseFourteen();
 	//	stc.testCaseFifteen();
-		stc.testCaseSixteen();
+	//	stc.testCaseSixteen();
+	//	stc.testCaseSeventeen();
+	//	stc.testCaseEighteen();
+	//	stc.testCaseNineteen();
+	//	stc.testCaseTwenty();
+	//	stc.testCaseTwentyone();
+	//	stc.testCaseTwentytwo();
+	//	stc.testCaseTwentythree();
+	//	stc.testCaseTwentyfour();
+	//	stc.testCaseTwentyfive();
+	//	stc.testCaseTwentysix();
+	//	stc.testCaseTwentyseven();
+	//	stc.testCaseTwentyeight();
+	//	stc.testCaseTwentynine();
+	//	stc.testCaseThirty();
+	//	stc.testCaseThirtyone();
+		stc.testCaseThirtytwo();
 		/*
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
