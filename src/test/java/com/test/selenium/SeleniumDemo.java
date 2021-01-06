@@ -29,9 +29,17 @@ public class SeleniumDemo {
 	//	stc.testCaseFourA();
 	//	stc.testCaseFourB();
 		// stc.testCaseFive();
-		stc.testCaseSix();
-		
-		
+	//	stc.testCaseSix();
+	//	stc.testCaseSeven();
+	//	stc.testCaseEight();
+	//	stc.testCaseNine();
+	//	stc.testCaseTen();
+	// stc.testCaseEleven();
+	//	stc.testCaseTwelve();
+	//	stc.testCaseThirteen();
+	//	stc.testCaseFourteen();
+	//	stc.testCaseFifteen();
+		stc.testCaseSixteen();
 		/*
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();

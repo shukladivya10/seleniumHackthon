@@ -8,11 +8,18 @@ import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import com.sun.tools.javac.util.List;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SeleniumTestCases {
+
+		private Properties newTab;
+
 
 		public void testCaseOne(String url, String userId, String passId, String emailId, String submitId){
 			WebDriver driver = null;
@@ -147,6 +154,12 @@ public void testCaseSix() {
 	driver.findElement(By.id("Login")).click();
 	driver.findElement(By.id("userNav")).click();
 	driver.findElement(By.linkText("My Profile")).click(); 
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[@class='contactInfoLaunch editLink']//img[@title='Edit Profile']")).click();
+	Thread.sleep(2000);
+	 driver.switchTo().window((String) newTab.get(0));
+	    assertAdvertisingBlog();
+
 	
 			
 	}catch(Exception e) {
@@ -157,6 +170,379 @@ public void testCaseSix() {
 	
 }
 
+private void assertAdvertisingBlog() {
+	// TODO Auto-generated method stub
+	
+}
+public void testCaseSeven() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	driver.findElement(By.id("userNav")).click();
+	Thread.sleep(1000);
+	driver.findElement(By.linkText("My Settings")).click(); 
+	Thread.sleep(1000);
+	driver.findElement(By.xpath("//tbody/tr[1]/td[1]/div[1]/div[4]/div[2]/a[1]")).click();
+	Thread.sleep(1000);
+	driver.findElement(By.xpath("//a[@id='LoginHistory_font']")).click();
+	Thread.sleep(1000);
+	driver.findElement(By.xpath("//a[@href=\"javascript:HTMLTreeNode.prototype.toggleHTMLTree('EmailSetup');\"]")).click();
+	Thread.sleep(1000);
+	driver.findElement(By.xpath(" //span[@id='EmailSettings_font']")).click();
+	Thread.sleep(1000);
+	driver.findElement(By.id("sender_name")).clear();
+	driver.findElement(By.id("sender_name")).sendKeys("Divya Shukla");
+	Thread.sleep(2000);
+	driver.findElement(By.id("sender_email")).clear();
+	driver.findElement(By.id("sender_email")).sendKeys("divyashukla.mba@gmail.com");
+	Thread.sleep(2000);
+	/*List <WebElement> radio_button = extracted(driver);
+	boolean bValue;
+	bValue = radio_button.get(1).isSelected();
+	if (bValue==false) 
+	{
+	radio_button.get(1).click();	
+	}
+	else
+	{
+		System.out.println("it is already selected");
+		
+	}
+	Thread.sleep(2000);*/
+	driver.findElement(By.xpath("//input[@title='Save']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[@href=\"javascript:HTMLTreeNode.prototype.toggleHTMLTree('DisplayAndLayout');\"]")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[@id='CustomizeTabs_font']")).click();
+	Thread.sleep(2000);
+	Select customApp = new Select(driver.findElement(By.id("p4")));
+	customApp.selectByVisibleText("Salesforce Chatter");
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//option[@value='report']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//img[@title='Add']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//input[@title='Save']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[@href=\"javascript:HTMLTreeNode.prototype.toggleHTMLTree('CalendarAndReminders');\"]")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//span[@id='Reminders_font']")).click();
+	
+	driver.findElement(By.xpath("//input[@id='testbtn']")).click();
+	//  driver.quit();
+ 
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+		
+	}
+	
+}
+
+public void testCaseEight() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	driver.findElement(By.id("userNav")).click();
+	driver.findElement(By.linkText("Developer Console")).click(); 
+	driver.switchTo().activeElement();
+	
+			
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}
+
+public void testCaseNine() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	driver.findElement(By.id("userNav")).click();
+	driver.findElement(By.linkText("Logout")).click(); 
+
+			
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}
+
+public void testCaseTen() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	driver.findElement(By.xpath("//a[normalize-space()='Accounts']")).click();
+	driver.findElement(By.xpath("//input[@title='New']")).click();
+	
+
+			
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}
+
+public void testCaseEleven() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	driver.findElement(By.xpath("//a[normalize-space()='Accounts']")).click();
+	driver.findElement(By.xpath("//input[@title='New']")).click();
+	
+
+			
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}
+
+public void testCaseTwelve() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	driver.findElement(By.xpath("//a[normalize-space()='Accounts']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.className("dialogClose")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(2000);
+	//driver.findElement(By.xpath("//input[@title='New']")).click();
+	//Thread.sleep(2000);
+	//driver.findElement(By.className("dialogClose")).click();
+	//Thread.sleep(2000);
+	//driver.findElement(By.xpath("//a[normalize-space()='Create New View']")).click();
+	Select view = new Select(driver.findElement(By.id("fcf")));
+	view.selectByVisibleText("All Accounts");
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//input[@title='Go!']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[normalize-space()='Edit']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("fname")).clear();
+    driver.findElement(By.id("fname")).sendKeys("All Accounts 2021");
+    Thread.sleep(2000);
+    Select field = new Select(driver.findElement(By.id("fcol1")));
+	field.selectByVisibleText("Account Name");
+	Thread.sleep(2000);
+	 Select opr = new Select(driver.findElement(By.id("fop1")));
+	opr.selectByVisibleText("contains");
+		Thread.sleep(2000);
+  //  driver.findElement(By.id("fval1-components")).sendKeys("abcd");
+		driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/div[2]/form[1]/div[3]/table[1]/tbody[1]/tr[1]/td[2]/input[1]")).click();
+    Thread.sleep(2000);
+    
+    
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}
+
+public void testCaseThirteen() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	driver.findElement(By.xpath("//a[normalize-space()='Accounts']")).click();
+	Thread.sleep(2000);
+//	driver.findElement(By.xpath("//input[@title='New']")).click();
+	driver.findElement(By.className("dialogClose")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[normalize-space()='Merge Accounts']")).click();
+	driver.findElement(By.id("srch")).clear();
+	driver.findElement(By.id("srch")).sendKeys("RSSBank");
+	driver.findElement(By.xpath("//input[@value='Find Accounts']")).click();
+	driver.findElement(By.xpath("//div[@class='pbBottomButtons']//input[@title='Next']")).click();
+	driver.findElement(By.xpath("//div[@class='pbBottomButtons']//input[@title='Merge']")).click();
+	Thread.sleep(2000);
+	
+	
+
+			
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}
+
+public void testCaseFourteen() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	driver.findElement(By.xpath("//a[normalize-space()='Accounts']")).click();
+	Thread.sleep(2000);
+//	driver.findElement(By.xpath("//input[@title='New']")).click();
+	driver.findElement(By.className("dialogClose")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(3000);
+	driver.findElement(By.xpath("//a[normalize-space()='Accounts with last activity > 30 days']")).click();
+	Thread.sleep(2000);
+	// Select field = new Select(driver.findElement(By.id("ext-gen150")));
+	//field.selectByVisibleText("All Time");
+	driver.findElement(By.xpath("//img[@id='ext-gen152']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//button[normalize-space()='Today']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//img[@id='ext-gen154']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("ext-comp-1045")).clear();
+	driver.findElement(By.id("ext-comp-1045")).sendKeys("1/20/2021");
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//button[@id='ext-gen49']")).click();
+	driver.findElement(By.id("saveReportDlg_reportNameField")).sendKeys("TestReport1");
+	driver.findElement(By.xpath("//input[@id='saveReportDlg_DeveloperName']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//button[normalize-space()='Save and Run Report']")).click();
+
+			
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}
+
+public void testCaseFifteen() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[normalize-space()='Opportunities']")).click();
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(3000);
+	
+	driver.findElement(By.xpath("//select[@id='fcf']")).click();	
+	
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}
+
+public void testCaseSixteen() {
+	WebDriver driver = null;
+	try {
+	WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+	driver.get("https://teckarch-dev-ed.my.salesforce.com");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
+	driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin123");
+	driver.findElement(By.id("Login")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[normalize-space()='Opportunities']")).click();
+	driver.findElement(By.id("tryLexDialogX")).click();
+    driver.switchTo().defaultContent();
+	Thread.sleep(3000);
+	driver.findElement(By.xpath("//div[@id='createNewButton']")).click();
+	driver.findElement(By.xpath("//a[@class='opportunityMru menuButtonMenuLink']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id("opp3")).sendKeys("Opportunity jan 2020");
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//a[@id='opp4_lkwgt']")).click();
+	driver.findElement(By.xpath("This element is in iframe - //a[normalize-space()='abcd account']")).click();
+	Thread.sleep(2000);
+	
+	}catch(Exception e) {
+		System.out.println("Exception: " + e);
+	}  finally{
+	//	driver.quit();
+	}
+	
+}
+
+	
 		public Properties getPropValues() throws IOException {
 			InputStream inputStream = null; 
 			Properties prop = null;
