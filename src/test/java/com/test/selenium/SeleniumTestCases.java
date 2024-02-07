@@ -29,9 +29,9 @@ public class SeleniumTestCases {
 			driver.get("https://teckarch-dev-ed.my.salesforce.com");
 			driver.manage().window().maximize();
 			driver.findElement(By.id("username")).clear();
+			driver.findElement(By.id("password")).clear();
 			driver.findElement(By.id("username")).sendKeys("divyass@abc.com");
 			driver.findElement(By.id("password")).sendKeys("admin123");
-			driver.findElement(By.id("password")).clear();
 			driver.findElement(By.id("Login")).click();
 			}catch(Exception e) {
 				System.out.println("Exception: " + e);
